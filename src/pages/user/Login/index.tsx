@@ -96,9 +96,10 @@ const Login: React.FC = () => {
               id="pages.login.loginWith"
               defaultMessage="其他登录方式"
             />,
-            <AlipayCircleOutlined key="AlipayCircleOutlined" className={styles.icon} />,
-            <TaobaoCircleOutlined key="TaobaoCircleOutlined" className={styles.icon} />,
-            <WeiboCircleOutlined key="WeiboCircleOutlined" className={styles.icon} />,
+            // <AlipayCircleOutlined key="AlipayCircleOutlined" className={styles.icon} />,
+            // <TaobaoCircleOutlined key="TaobaoCircleOutlined" className={styles.icon} />,
+            // <WeiboCircleOutlined key="WeiboCircleOutlined" className={styles.icon} />,
+            <> 暂不支持</>
           ]}
           onFinish={async (values) => {
             await handleSubmit(values as API.LoginParams);
@@ -112,13 +113,13 @@ const Login: React.FC = () => {
                 defaultMessage: '账户密码登录',
               })}
             />
-            <Tabs.TabPane
+            {/* <Tabs.TabPane
               key="mobile"
               tab={intl.formatMessage({
                 id: 'pages.login.phoneLogin.tab',
                 defaultMessage: '手机号登录',
               })}
-            />
+            /> */}
           </Tabs>
 
           {status === 'error' && loginType === 'account' && (

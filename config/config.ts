@@ -66,6 +66,17 @@ export default defineConfig({
       ],
     },
     {
+      path: '/MainPage',
+      name: 'MainPage',
+      icon: 'dashboard',
+      routes: [
+        {
+          path: '/dashboard',
+          redirect: '/MainPage/main',
+        }
+      ]
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       icon: 'dashboard',
